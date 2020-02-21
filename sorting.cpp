@@ -24,25 +24,7 @@ int partitionBegin(vector<int> &a, int l, int r) {
 
   }
   return j;
-}
-int partitionEnd(vector<int> &a, int l, int r) {
-  int x = a[l];
-  int j = l;
-  int k = l;
-  for (int i = l + 1; i <= r; i++) {
-    if (a[i] < x) {
-      swap(a[i], a[j]);
-      j++;
-    }
-    if (a[i] == x)
-    {
-      swap(a[k + 1], a[i]);
-      k++;
 
-    }
-
-  }
-  return k;
 }
 void randomized_quick_sort(vector<int> &a, int l, int r) {
   if (l >= r) {
